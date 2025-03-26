@@ -1,13 +1,11 @@
 # cvpo-carla
 A minimal framework for comparing CVPO with other safe reinforcement learning algorithms in the Carla driving simulator.
 
-Make sure you have the Carla simulator installed
+#Make sure you have the Carla simulator installed
 Install required dependencies:
-Copypip install torch gym numpy matplotlib
+pip install torch gym numpy matplotlib
 
-Ensure all Safe RL libraries are installed
-
-*Start carla environment in a terminal*
+#Start carla environment in a terminal
 cd carla
 ./CarlaUE4.sh -opengl -carla-server -RenderOffScreen
 
