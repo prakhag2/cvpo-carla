@@ -1,0 +1,47 @@
+###################### env configs ######################
+env: 'highway-safety-v0'
+timeout_steps: 300
+cost_limit: &COST_LIM 10
+seed: 0
+mode: 'train'
+
+###################### runner configs ######################
+device: "cpu"
+threads: 4
+policy: "cvpo"
+epochs: 10
+save_freq: 2
+exp_name: null
+data_dir: null
+
+###################### cvpo specific configs ##############
+cvpo:
+    num_qc: 1
+    cost_limit: *COST_LIM
+    use_cost_decay: False
+    cost_start: 300
+    cost_end: *COST_LIM
+    decay_epoch: 200
+    dual_constraint: 0.1 
+    kl_mean_constraint: 0.001 
+    kl_var_constraint: 0.001 
+    kl_constraint: 0.01 
+    mstep_iteration_num: 6
+    alpha_mean_scale: 1.0 
+    alpha_var_scale: 100.0 
+    alpha_scale: 10.0 
+    alpha_mean_max: 0.1 
+    alpha_var_max: 10.0 
+    alpha_max: 1.0 
+    sample_action_num: 32 
+    actor_lr: 0.002
+    critic_lr: 0.001
+    ac_model: "mlp"
+    hidden_sizes: [256, 256]
+    gamma: 0.99
+    polyak: 0.995
+    num_q: 2
+    worker_config:
+        warmup_steps: 0
+        batch_size: 300
+        buffer_size: 80000

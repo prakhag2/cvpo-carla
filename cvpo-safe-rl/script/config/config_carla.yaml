@@ -1,0 +1,127 @@
+######## General parameters ########
+# mode: "train" or "eval"
+mode: "train"
+
+# environment related
+env: "carla-v0"
+
+# RL algorithm
+policy: "cvpo"
+
+# Maximum time steps in one episode
+timeout_steps: 1000
+
+# random seed
+seed: 0
+
+# number of training epochs
+epochs: 1000
+
+# model save frequency
+save_freq: 20
+
+# experiment name, if None, it would be set to env_policy
+exp_name: null
+
+# number of sample episodes per epoch
+sample_episode_num: 50
+
+# number of training batches to replay per epoch
+episode_rerun_num: 10
+
+# number of evaluation episodes per epoch
+evaluate_episode_num: 1
+
+# device to use, "cpu" or "gpu" (if gpu available)
+device: "gpu"
+
+# Number of parallel threads for tensorflow to use
+threads: 4
+
+# For evaluation mode
+load_dir: null
+
+######## CVPO Parameters ########
+cvpo:
+  # Number of Q networks in the cost critic
+  num_qc: 2
+  
+  # Safety constraint - cost limit per episode
+  cost_limit: 20
+  
+  # Cost decay parameters
+  use_cost_decay: true
+  cost_start: 50
+  cost_end: 5
+  decay_epoch: 200
+  
+  # Dual constraint parameters
+  dual_constraint: 0.1
+  
+  # KL constraints
+  kl_mean_constraint: 0.01
+  kl_var_constraint: 0.0001
+  kl_constraint: 0.01
+  
+  # Alpha scales and maximums
+  alpha_mean_scale: 1.0
+  alpha_var_scale: 100.0
+  alpha_scale: 10.0
+  alpha_mean_max: 0.1
+  alpha_var_max: 10.0
+  alpha_max: 1.0
+  
+  # CVPO algorithm parameters
+  sample_action_num: 64
+  mstep_iteration_num: 5
+  
+  # Learning rates
+  actor_lr: 0.0003
+  critic_lr: 0.0001
+  
+  # Model architecture
+  ac_model: "mlp"
+  hidden_sizes: [256, 256]
+  
+  # Reinforcement learning parameters
+  gamma: 0.99
+  polyak: 0.995
+  num_q: 2
+  
+  # Debug mode flag
+  debug_mode: true
+  
+  # Replay buffer parameters for worker
+  steps_per_epoch: 1000
+  worker_config:
+    batch_size: 256
+    buffer_size: 1000000
+    warmup_steps: 5000
+
+######## Carla Environment Parameters ########
+carla_params:
+  number_of_vehicles: 10
+  number_of_walkers: 5
+  display_size: 256
+  max_past_step: 1
+  dt: 0.1
+  discrete: false
+  discrete_acc: [-3.0, 0.0, 3.0]
+  discrete_steer: [-0.2, 0.0, 0.2]
+  continuous_accel_range: [-3.0, 3.0]
+  continuous_steer_range: [-0.3, 0.3]
+  ego_vehicle_filter: 'vehicle.lincoln*'
+  port: 2000
+  town: 'Town03'
+  task_mode: 'random'
+  max_time_episode: 1000
+  max_waypt: 12
+  obs_range: 32
+  lidar_bin: 0.125
+  d_behind: 12
+  out_lane_thres: 2.0
+  desired_speed: 8
+  max_ego_spawn_times: 200
+  display_route: true
+  pixor_size: 64
+  pixor: false
