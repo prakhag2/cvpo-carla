@@ -23,6 +23,7 @@ A minimal framework for comparing CVPO with other safe reinforcement learning al
 2.  **Environment Variables:** Set the `PYTHONPATH` to include the necessary Carla and gym-carla directories. Adjust the paths according to your installation:
 
     ```bash
+    cd cvpo-safe-rl
     export PYTHONPATH=$PYTHONPATH:/home/prakhargautam/experiments/carla/PythonAPI/carla/dist/carla-0.9.15-py3.7-linux-x86_64.egg:/home/prakhargautam/experiments/cvpo-safe-rl/gym-carla
     ```
 
