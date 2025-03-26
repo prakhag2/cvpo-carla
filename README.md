@@ -7,18 +7,18 @@ Copypip install torch gym numpy matplotlib
 
 Ensure all Safe RL libraries are installed
 
-Start carla environment in a terminal:
+*Start carla environment in a terminal*
 cd carla
 ./CarlaUE4.sh -opengl -carla-server -RenderOffScreen
 
-Train a Single Algorithm
+*Train a Single Algorithm*
 export PYTHONPATH=$PYTHONPATH:/home/prakhargautam/experiments/carla/PythonAPI/carla/dist/carla-0.9.15-py3.7-linux-x86_64.egg:/home/prakhargautam/experiments/cvpo-safe-rl/gym-carla
 
-To train the CVPO algorithm (in a new terminal)
+*To train the CVPO algorithm (in a new terminal)*
 python run_carla_comparison.py --policy cvpo --epochs 300
 
-Train and Compare Multiple Algorithms
-To compare CVPO with SAC with Lagrangian constraints:
+*Train and Compare Multiple Algorithms*
+*To compare CVPO with SAC with Lagrangian constraints:*
 python compare_algorithms.py --algorithms cvpo sac_lag --epochs 300
 
 Available Algorithms
@@ -29,7 +29,7 @@ td3: Twin Delayed DDPG (without safety constraints)
 td3_lag: TD3 with Lagrangian safety constraints
 
 Command-line Options
-Single Algorithm Training/Evaluation
+*Single Algorithm Training/Evaluation*
 python run_carla_comparison.py --policy POLICY [options]
 Options:
 
@@ -49,7 +49,7 @@ Options:
 --exp_name: Experiment name
 --eval_episodes: Number of episodes to evaluate (default: 5)
 
-Algorithm Comparison
+*Algorithm Comparison*
 python compare_algorithms.py --algorithms ALG1 ALG2 [options]
 Options:
 
@@ -67,7 +67,7 @@ Options:
 --verbose: Enable verbose output
 --device: Device to use ("cuda" or "cpu")
 
-Example Workflows
+*Example Workflows*
 
 Train CVPO with curriculum learning in Town05:
 python run_carla_comparison.py --policy cvpo --town Town05 --epochs 300 --desired_speed 5.0
