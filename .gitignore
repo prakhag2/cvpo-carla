@@ -1,0 +1,6 @@
+# Ignore everything
+*
+!.gitignore
+!cvpo-safe-rl/
+!cvpo-safe-rl/**
+cvpo-safe-rl/carla_comparison/
