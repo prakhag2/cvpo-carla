@@ -4,3 +4,5 @@
 !cvpo-safe-rl/
 !cvpo-safe-rl/**
 cvpo-safe-rl/carla_comparison/
+!cvpo-safe-rl/gym-carla/
+!cvpo-safe-rl/gym-carla/**
