@@ -1,0 +1,60 @@
+===== CARLA ALGORITHM COMPARISON RESULTS =====
+
+Date: 2025-03-25 22:41:37
+Number of algorithms compared: 2
+
+OVERVIEW:
+Algorithm       Avg Reward      Avg Length      Episodes  
+------------------------------------------------------------
+sac_lag         2582.76         500.00          5         
+cvpo            2229.02         455.80          5         
+
+
+DETAILED RESULTS:
+
+=== sac_lag ===
+Average reward: 2582.76
+Average episode length: 500.00
+
+Episode details:
+  Episodes completed: 5
+  Total curves encountered: 0
+  Curve safety percentage: 0.0%
+  Average lane discipline: 90.6%
+
+  Per-episode results:
+  Episode    Reward     Length     Curves     Lane Issues     Lane Disc %    
+  ----------------------------------------------------------------------
+  1          2606.2     500        0          42              91.6           
+  2          2608.2     500        0          111             77.8           
+  3          2478.8     500        0          0               100.0          
+  4          2592.3     500        0          39              92.2           
+  5          2628.3     500        0          43              91.4           
+
+Evaluation videos:
+  sac_lag_evaluation_epoch0.mp4
+
+
+=== cvpo ===
+Average reward: 2229.02
+Average episode length: 455.80
+
+Episode details:
+  Episodes completed: 5
+  Total curves encountered: 0
+  Curve safety percentage: 0.0%
+  Average lane discipline: 85.7%
+
+  Per-episode results:
+  Episode    Reward     Length     Curves     Lane Issues     Lane Disc %    
+  ----------------------------------------------------------------------
+  1          2495.4     500        0          129             74.2           
+  2          2485.6     500        0          44              91.2           
+  3          1689.5     362        0          119             67.1           
+  4          2057.8     421        0          16              96.2           
+  5          2416.8     496        0          0               100.0          
+
+Evaluation videos:
+  cvpo_evaluation_epoch0.mp4
+
+
