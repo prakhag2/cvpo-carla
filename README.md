@@ -1,6 +1,6 @@
 # cvpo-carla
 
-A minimal framework for comparing CVPO with other safe reinforcement learning algorithms in the Carla driving simulator. This repository extends (CVPO)[https://github.com/liuzuxin/cvpo-safe-rl] for [CARLA-Simulations] (https://carla.org/) using [gym-carla] (https://github.com/cjy1992/gym-carla). Gym-carla has also been modified to run in a headless mode on a linux based VM.
+A minimal framework for comparing CVPO with other safe reinforcement learning algorithms in the Carla driving simulator. This repository extends [CVPO](https://github.com/liuzuxin/cvpo-safe-rl) for [CARLA-Simulations] (https://carla.org/) using [gym-carla] (https://github.com/cjy1992/gym-carla). Gym-carla has also been modified to run in a headless mode on a linux based VM.
 
 ## Prerequisites
 
