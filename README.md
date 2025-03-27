@@ -187,11 +187,6 @@ zstd                      1.5.0                ha95c52a_0    conda-forge
 ```
 3.  GPU installed with CUDA (verify with nvidia-smi for installation)
 4.  **Carla Simulator:** Ensure you have the Carla simulator installed. Refer to the official Carla documentation for installation instructions. This example uses CARLA_0.9.15.tar.gz.
-5.  **Dependencies:** Additionally install the following packages:
-
-    ```bash
-    pip install torch gym numpy matplotlib
-    ```
 
 ## Setup
 
