@@ -4,10 +4,10 @@ A minimal framework for comparing CVPO with other safe reinforcement learning al
 
 ## Prerequisites
 
-1.  Environment: Python 3.6 + conda. Use install.sh and requirements.txt in safe_rl for installation.
+1.  Environment: Python 3.6 + conda. Use install_all.sh and requirements.txt in the root dir for installation.
 2.  GPU installed with CUDA (verify with nvidia-smi for installation)
 3.  **Carla Simulator:** Ensure you have the Carla simulator installed. Refer to the official Carla documentation for installation instructions. This example uses CARLA_0.9.15.tar.gz.
-4.  **Dependencies:** Install the required Python packages:
+4.  **Dependencies:** Additionally install the following packages:
 
     ```bash
     pip install torch gym numpy matplotlib
