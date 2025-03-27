@@ -7,7 +7,6 @@ A minimal framework for comparing CVPO with other safe reinforcement learning al
 1.  Environment: Python 3.6 + conda. Use install_all.sh and requirements.txt in the root dir for installation. The following packages are installed for the purposes of this run.
 
     ```bash
-    # packages in environment at /home/prakhargautam/miniconda3/envs/carla_venv_py36:
     #
     # Name                    Version                   Build  Channel
     _libgcc_mutex             0.1                        main  
