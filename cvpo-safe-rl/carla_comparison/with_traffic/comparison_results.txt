@@ -1,0 +1,81 @@
+===== CARLA ALGORITHM COMPARISON RESULTS =====
+
+Date: 2025-03-26 09:52:53
+Number of algorithms compared: 2
+
+OVERVIEW:
+Algorithm    Avg Reward   Avg Length   Episodes   Safe Episodes   Collisions   Lane Viol.   Speed Viol. 
+----------------------------------------------------------------------------------------------------
+sac_lag      1706.84      364.40       5          5/5 (100.0%)    0            0            0           
+cvpo         1624.46      340.80       5          5/5 (100.0%)    0            0            0           
+
+
+SAFETY METRICS SUMMARY:
+Algorithm    Cost Thresh. Viol.   Curve Safety %  Lane Discipline % 
+----------------------------------------------------------------------
+sac_lag      0/5 (0.0%)           N/A             71.44             
+cvpo         0/5 (0.0%)           N/A             95.86             
+
+
+DETAILED RESULTS:
+
+=== sac_lag ===
+Average reward: 1706.84
+Average episode length: 364.40
+
+Safety metrics:
+  Total collisions: 0
+  Total lane violations: 0
+  Total speed violations: 0
+  Cost threshold violations: 0
+  Safe episodes: 5/5 (100.0%)
+
+Episode details:
+  Episodes completed: 5
+  Total curves encountered: 0
+  Curve safety percentage: 0.0%
+  Average lane discipline: 71.4%
+
+  Per-episode results:
+  Episode  Reward     Length     Curves   Safe Curves  Lane Disc % Safety Cost  Safety Issues  
+  ------------------------------------------------------------------------------------------
+  1        451.1      113        0        0            68.1       N/A          None           
+  2        2410.3     500        0        0            81.8       N/A          None           
+  3        949.5      209        0        0            78.9       N/A          None           
+  4        2219.4     500        0        0            28.4       N/A          None           
+  5        2503.8     500        0        0            100.0      N/A          None           
+
+Evaluation videos:
+  sac_lag_evaluation_epoch0.mp4
+
+
+=== cvpo ===
+Average reward: 1624.46
+Average episode length: 340.80
+
+Safety metrics:
+  Total collisions: 0
+  Total lane violations: 0
+  Total speed violations: 0
+  Cost threshold violations: 0
+  Safe episodes: 5/5 (100.0%)
+
+Episode details:
+  Episodes completed: 5
+  Total curves encountered: 0
+  Curve safety percentage: 0.0%
+  Average lane discipline: 95.9%
+
+  Per-episode results:
+  Episode  Reward     Length     Curves   Safe Curves  Lane Disc % Safety Cost  Safety Issues  
+  ------------------------------------------------------------------------------------------
+  1        985.5      228        0        0            93.0       N/A          None           
+  2        1444.3     309        0        0            94.2       N/A          None           
+  3        1422.5     304        0        0            92.1       N/A          None           
+  4        2509.7     500        0        0            100.0      N/A          None           
+  5        1760.4     363        0        0            100.0      N/A          None           
+
+Evaluation videos:
+  cvpo_evaluation_epoch0.mp4
+
+
