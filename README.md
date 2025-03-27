@@ -4,7 +4,7 @@ A minimal framework for comparing CVPO with other safe reinforcement learning al
 
 ## Prerequisites
 
-1.  **Carla Simulator:** Ensure you have the Carla simulator installed. Refer to the official Carla documentation for installation instructions. This example uses CARLA_0.9.15.tar.gz.
+1.  **Carla Simulator:** Ensure you have the Carla simulator installed. Refer to the official Carla documentation for installation instructions. This example uses CARLA_0.9.15.tar.gz & python 3.6 with conda.
 2.  **Dependencies:** Install the required Python packages:
 
     ```bash
@@ -20,7 +20,7 @@ A minimal framework for comparing CVPO with other safe reinforcement learning al
     ./CarlaUE4.sh -opengl -carla-server -RenderOffScreen
     ```
 
-2.  **Environment Variables:** Set the `PYTHONPATH` to include the necessary Carla and gym-carla directories. Adjust the paths according to your installation:
+2.  **Environment Variables:** On a different terminal set the `PYTHONPATH` to include the necessary Carla and gym-carla directories. Adjust the paths according to your installation:
 
     ```bash
     cd cvpo-safe-rl
