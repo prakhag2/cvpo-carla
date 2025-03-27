@@ -4,7 +4,7 @@ A minimal framework for comparing CVPO with other safe reinforcement learning al
 
 ## Prerequisites
 
-1.  **Carla Simulator:** Ensure you have the Carla simulator installed. Refer to the official Carla documentation for installation instructions.
+1.  **Carla Simulator:** Ensure you have the Carla simulator installed. Refer to the official Carla documentation for installation instructions. This example uses CARLA_0.9.15.tar.gz.
 2.  **Dependencies:** Install the required Python packages:
 
     ```bash
